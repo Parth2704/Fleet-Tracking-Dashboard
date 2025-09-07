@@ -51,10 +51,9 @@ const StatusFilters = ({ activeFilter, onFilterChange, filterCounts = {} }) => {
             <Grid item key={filter.key} size={{ xs: 12, sm: 6, md: 3, lg: 6 }}>
               <ListItem
                 disablePadding
-                sx={{ border: "1px solid #ccc", borderRadius: 2 }}
+                sx={{ border: `1px solid ${isActive ? filter?.textColor || filter?.color : '#ccc'}`, borderRadius: 2 }}
               >
                 <ListItemButton
-                  selected={isActive}
                   onClick={() => handleFilterClick(filter.key)}
                   sx={{
                     borderRadius: 2,
